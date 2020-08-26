@@ -1,3 +1,13 @@
+$(document).ready(function(){
+    var source = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    var context = {
+          dati: datiStudenti,
+          names: nomiCognomi
+        };
+    var html = template(context);
+    $('.pos').append(html);
+});
 // creo ogetto studente 
 var Studente = function (nome,cognome,eta) {
     this.nome = nome;
@@ -26,14 +36,5 @@ for(var i=0;i<studenti.length;i++){
     nomiCognomi.push('nome: '+ studenti[i].nome +' cognome: '+studenti[i].cognome);
 };
 // handlebars
-$(document).ready(function(){
-    var source = $("#entry-template").html();
-    var template = Handlebars.compile(source);
-    var context = {
-          dati: datiStudenti,
-          names: nomiCognomi
-        };
-    var html = template(context);
-    $('.pos').append(html);
-});
+
 
