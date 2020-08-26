@@ -5,10 +5,10 @@ var Studente = function (nome,cognome,eta) {
 };
 var giulia = new Studente('Giulia','Saporiti',20);
 var matteo = new Studente ('Matteo','De blasio',19);
-//var newUser = new Studente(prompt('inserisci Nome'),prompt('Inserire Cognome'),prompt('Inserire eta'));
+var newUser = new Studente(prompt('inserisci Nome'),prompt('Inserire Cognome'),prompt('Inserire eta'));
 var studenti = [];
 var datiStudenti = [];
-studenti.push(giulia,matteo);
+studenti.push(giulia,matteo,newUser);
 for(var i=0;i<studenti.length;i++){
     for (var k in studenti[i]){
         datiStudenti.push(k+': '+studenti[i][k]+' ');
